@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Shop Homepage - Start Bootstrap Template</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="myApp">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              
+               <span><img src="images/smallcolor_icos.png" width="60px" height="60px"> <h1 class="pull-right">Getting to know your coworkers</h1></span>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- /.container -->
+        </div>
+    </nav>
+    <!-- Page Content -->
+    <div class="container" ng-controller="coworkerListCtrl">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="list-group" ng-repeat="coworker in coworkers"> 
+                    <a ng-href="/#!/details/{{coworker.id}}" class="list-group-item">{{coworker.firstName}} {{coworker.lastName}}</a> 
+                </div>
+            </div>
+            <div>
+            <p class="lead">Meet the person on the other side of the wall!</p>
+            </div>
+             <div ng-controller="detailsCtrl" ng-view></div>
+        </div>
+    </div>
+    <!-- /.container -->
+        <hr>
+        <!-- Footer -->
+        <footer>
+           
+                <div class="col-md-12">
+                    <p>Copyright &copy; Chez DD 2017</p>
+                </div>
+           
+        </footer>
+ 
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Import Angular components -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+  <!-- Import our app-->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
